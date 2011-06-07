@@ -1,0 +1,11 @@
+%h1 Add Paste
+%hr
+%form{:method => 'post', :action => '/add'}
+  %input{:type => 'text', :placeholder => 'Author', :name => 'author', :class => 'paste_author'}
+  %input{:type => 'text', :placeholder => 'Title of Paste', :name => 'name', :class => 'paste_name'}
+  %select{:name => 'language', :class => 'paste_language'}
+    - @languages.each do |name, key|
+      %option{:value => key}= name
+  %input{:type => 'submit', :value => 'Paste', :name => 'submit', :class => 'paste_submit'}
+  %br
+  %textarea{:name => 'code', :class => 'paste_code'}

@@ -1,0 +1,23 @@
+LANGUAGES = {
+    'C' => :c,
+    'C++' => :cpp,
+    'Java' => :java,
+    'CSS' => :css,
+    'Debug' => :debug,
+    'Delphi' => :delphi,
+    'Groovy' => :groovy,
+    'HTML' => :html,
+    'JavaScript' => :java_script,
+    'JSON' => :json,
+    'Ninja' => :ninja,
+    'Nitro XHTML' => :nitro_xhtml,
+    'PHP' => :php,
+    'Plain Text' => :plaintext,
+    'Python' => :python,
+    'RHTML' => :rhtml,
+    'Ruby' => :ruby,
+    'Scheme' => :scheme,
+    'SQL' => :sql,
+    'XML' => :xml,
+    'YAML' => :yaml
+}

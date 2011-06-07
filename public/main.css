@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Correct behavior for the HTML5 tags used */
+figure, footer, header, nav, section, figcaption {
+    display: block;
+}
+
+/* Basic Styling - example still works without this part of the css */
+body {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    width: 100%;
+    background: #272727;
+}
+
+header h1 {
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    padding: 10px 10px 0px 10px;
+    width: 960px;
+    margin: 0 auto;
+}
+
+header h1 a {
+    text-decoration: none;
+}
+
+header p {
+    color: #aaa;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    padding: 2px 10px 10px 10px;
+    line-height: 20px;
+    width: 960px;
+    margin: 0 auto;
+}
+
+header a {
+    color: #fff;
+}
+
+header a:hover {
+    color: #ddd;
+}
+
+nav {
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #ccc;
+    background: #eee;
+    width: 100%;
+}
+
+nav ul {
+    padding: 5px 10px;
+    width: 960px;
+    margin: 0 auto;
+}
+
+nav li {
+    display: inline;
+    margin-right: 7px;
+}
+
+nav li a {
+    font-size: 13px;
+    color: #555;
+    text-decoration: none;
+    text-shadow: #fff 0px 1px 0px;
+    -khtml-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    background: #ddd;
+    padding: 1px 7px;
+}
+
+nav li a:hover {
+    color: #000;
+    border: 1px solid #aaa;
+}
+
+nav li a:active {
+    background: #ccc;
+    border: 1px solid #888;
+}
+
+.content {
+    width: 960px;
+    margin: 0 auto;
+    padding: 10px 0;
+    margin-bottom: 25px;
+}
+
+.content h1 {
+    font-size: 19px;
+    color: #222;
+}
+
+.content p {
+    font-size: 12px;
+    color: #666;
+    margin-top: 2px;
+    line-height: 20px;
+}
+
+footer p {
+    font-size: 12px;
+    color: #555;
+    width: 960px;
+    margin: 0 auto;
+    text-shadow: #eee 0px 1px 0px;
+}
+
+.paste_author, .paste_name {
+    padding: 7px 10px 7px 30px;
+}
+
+.paste_language {
+    padding: 6px 10px 6px 30px;
+}
+
+.paste_code {
+    height: 300px;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.paste_author, .paste_name, .paste_language {
+    background-position: 8px 7px;
+    background-size: 16px;
+    background-repeat: no-repeat;
+    width: 20%;
+}
+
+.search_input {
+    background-position: 8px 7px;
+    background-size: 16px;
+    background-repeat: no-repeat;
+    width: 80%;
+    padding: 7px 10px 7px 30px;
+    background-image: url('images/search.png');
+}
+
+.paste_author {
+    background-image: url('images/author.png');
+}
+
+.paste_name {
+    background-image: url('images/name.png');
+}
+
+.paste_language {
+    background-image: url('images/language.png');
+}
+
+.paste_submit, .search_submit {
+    background-color: #EEEEEE;
+    background-image: -moz-linear-gradient(center top, #EEEEEE, #CCCCCC);
+    border-color: #CCCCCC #CCCCCC #BBBBBB;
+    border-radius: 3px 3px 3px 3px;
+    border-style: solid;
+    border-width: 1px;
+    color: #333333;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 9px 10px 6px 10px;
+    text-align: center;
+    text-shadow: 0 1px 0 #EEEEEE;
+    cursor: pointer;
+}
+
+textarea, input, select {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #CCCCCC;
+    color: #888888;
+}
+
+footer {
+    background: #bbb;
+    padding: 5px 0;
+    border-bottom: 1px solid #aaa;
+    border-top: 1px solid #ddd;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+}
+
+hr {
+    border-color: #EEEEEE -moz-use-text-color -moz-use-text-color;
+    border-style: dashed none none;
+    border-width: 1px 0 0;
+    display: block;
+    height: 0;
+    padding: 5px 10px;
+}
+
+table.recent {
+    width: 100%;
+}
+
+table.recent thead {
+    font-weight: bold;
+}
+
+.line_numbers {
+    padding-right: 20px;
+    text-align: right;
+}

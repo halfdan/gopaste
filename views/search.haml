@@ -1,0 +1,8 @@
+%h1 Search pastes
+%hr
+%form{:method => 'post', :action => '/search'}
+  %input{:type => 'text', :placeholder => 'Keywords', :name => 'author', :class => 'search_input'}
+  %input{:type => 'submit', :value => 'Search', :name => 'submit', :class => 'search_submit'}
+
+#results
+

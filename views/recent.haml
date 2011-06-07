@@ -1,0 +1,17 @@
+%h1 Recent Pastes
+%hr
+%table.recent
+  %thead
+    %tr
+      %td Name
+      %td Author
+      %td Language
+      %td Created at
+  %tbody
+  - @pastes.each do |paste|
+    %tr
+      %td
+        %a{:href => '/paste/'+paste.slug}= paste.name
+      %td= paste.author
+      %td= paste.language
+      %td= paste.created_at

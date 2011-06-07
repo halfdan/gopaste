@@ -1,0 +1,30 @@
+!!! 5
+%html
+  %head
+    %title GoPaste - Paste your code anonymously and secure
+    %meta{"http-equiv" => "Content-Type", :content => "text/html; charset=utf-8"}
+    %link{:rel => "stylesheet", :href => "/main.css", :type => "text/css"}
+  %body
+    %header
+      %a{:href => "/"}
+        %h1 GoPaste
+      %p Anonymous and secure!
+    %section.menu
+      %nav
+        %ul
+          %li
+            %a{:href => "/"} New Paste
+          %li
+            %a{:href => "/recent"} Recent Pastes
+          %li
+            %a{:href => "/search"} Search
+          %li
+            %a{:href => "/browse"} Browse Languages
+          %li
+            %a{:href => "/about"} Features
+    %section.content
+      - if flash[:notice]
+        %p.flash= flash[:notice]
+      = yield
+    %footer
+      %p &copy; All Rights reserved. GoPaste.de &middot; Created by Fabian Becker
