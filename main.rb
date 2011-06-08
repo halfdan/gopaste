@@ -32,7 +32,7 @@ require_relative 'models/Paste'
 layout 'layout'
 
 get '/' do
-  @languages = LANGUAGES
+  @languages = LANGUAGES.sort
   haml :home
 end
 
