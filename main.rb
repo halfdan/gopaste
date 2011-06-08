@@ -24,6 +24,10 @@ enable :sessions
 
 helpers do
   use Rack::Flash
+
+  def get_language_name name
+    LANGUAGES.key(name.to_sym)
+  end
 end
 
 # require Models

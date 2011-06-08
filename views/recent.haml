@@ -13,5 +13,5 @@
       %td
         %a{:href => '/paste/'+paste.slug}= paste.name
       %td= paste.author
-      %td= paste.language
+      %td= get_language_name paste.language
       %td= paste.created_at
