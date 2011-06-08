@@ -38,8 +38,8 @@ end
 
 post '/add' do
   paste = Paste.new
-  paste.name = params[:name]
-  paste.author = params[:author]
+  paste.name = params[:name] unless params[:name].blank?
+  paste.author = params[:author] unless params[:author].blank?
   paste.language = params[:language]
   paste.code = params[:code]
   paste.save

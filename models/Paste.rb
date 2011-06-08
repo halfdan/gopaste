@@ -4,9 +4,9 @@ class Paste
   before_create :generate_slug
 
   key :slug, String#, :required => true
-  key :name, String, :default => ''
-  key :author, String
-  key :language, :default => 'text'
+  key :name, String, :default => 'No title given'
+  key :author, String, :default => 'Anonymous'
+  key :language, :default => :plaintext
   key :code, String, :required => true
   key :private, Boolean, :default => false
   timestamps!
