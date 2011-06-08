@@ -183,6 +183,7 @@ textarea, input, select {
     background: none repeat scroll 0 0 #FFFFFF;
     border: 1px solid #CCCCCC;
     color: #888888;
+    border-radius: 4px;
 }
 
 footer {
