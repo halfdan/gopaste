@@ -10,7 +10,7 @@
         %h1 GoPaste
       %p Anonymous and secure!
     %section.menu
-      %nav
+      %nav.topmenu
         %ul
           %li
             %a{:href => "/"} New Paste
@@ -23,8 +23,6 @@
           %li
             %a{:href => "/about"} About
     %section.content
-      - if flash[:notice]
-        %p.flash= flash[:notice]
       = yield
     %footer
       %p &copy; All Rights reserved. GoPaste.de &middot; Created by Fabian Becker
