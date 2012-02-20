@@ -51,9 +51,15 @@ header a:hover {
     color: #ddd;
 }
 
-nav {
+nav.topmenu {
     border-top: 1px solid #fff;
     border-bottom: 1px solid #ccc;
+    background: #eee;
+    width: 100%;
+}
+
+nav.pagination {
+    text-align: center;
     background: #eee;
     width: 100%;
 }
@@ -122,6 +128,10 @@ footer p {
 
 .paste_author, .paste_name {
     padding: 7px 10px 7px 30px;
+}
+
+.paste_special {
+    display: none;
 }
 
 .paste_language {
@@ -216,4 +226,18 @@ table.recent thead {
 .line_numbers {
     padding-right: 20px;
     text-align: right;
+}
+
+.line-numbers {
+    padding-right: 10px;
+}
+
+.line-numbers a {
+    text-decoration: none;
+    color: #999;
+}
+
+.recent a, .recent a:hover {
+    text-decoration: none;
+    color: #09D;
 }
