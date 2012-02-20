@@ -8,5 +8,5 @@ set :root,        root_dir
 set :app_file,    File.join(root_dir, 'main.rb')
 disable :run
 
-require 'main'
+require './main'
 run Sinatra::Application
