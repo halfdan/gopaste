@@ -1,0 +1,103 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    actionpack (3.2.1)
+      activemodel (= 3.2.1)
+      activesupport (= 3.2.1)
+      builder (~> 3.0.0)
+      erubis (~> 2.7.0)
+      journey (~> 1.0.1)
+      rack (~> 1.4.0)
+      rack-cache (~> 1.1)
+      rack-test (~> 0.6.1)
+      sprockets (~> 2.1.2)
+    activemodel (3.2.1)
+      activesupport (= 3.2.1)
+      builder (~> 3.0.0)
+    activesupport (3.2.1)
+      i18n (~> 0.6)
+      multi_json (~> 1.0)
+    bson (1.5.2)
+    bson_ext (1.5.2)
+      bson (= 1.5.2)
+    builder (3.0.0)
+    coderay (1.0.5)
+    erubis (2.7.0)
+    haml (3.1.4)
+    hike (1.2.1)
+    http_router (0.5.4)
+      rack (>= 1.0.0)
+      url_mount (~> 0.2.1)
+    i18n (0.6.0)
+    journey (1.0.1)
+    json (1.6.5)
+    kaminari (0.13.0)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      railties (>= 3.0.0)
+    mongo (1.5.2)
+      bson (= 1.5.2)
+    mongo_mapper (0.11.0)
+      activemodel (~> 3.0)
+      activesupport (~> 3.0)
+      plucky (~> 0.4.0)
+    multi_json (1.0.4)
+    padrino-core (0.9.21)
+      activesupport (>= 3.0.0)
+      http_router (~> 0.5.4)
+      sinatra (>= 1.1.0)
+      thor (>= 0.14.3)
+      tzinfo
+    padrino-helpers (0.9.21)
+      i18n (>= 0.4.1)
+      padrino-core (= 0.9.21)
+    plucky (0.4.4)
+      mongo (~> 1.5)
+    rack (1.4.1)
+    rack-cache (1.1)
+      rack (>= 0.4)
+    rack-flash (0.1.2)
+      rack
+    rack-protection (1.2.0)
+      rack
+    rack-ssl (1.3.2)
+      rack
+    rack-test (0.6.1)
+      rack (>= 1.0)
+    railties (3.2.1)
+      actionpack (= 3.2.1)
+      activesupport (= 3.2.1)
+      rack-ssl (~> 1.3.2)
+      rake (>= 0.8.7)
+      rdoc (~> 3.4)
+      thor (~> 0.14.6)
+    rake (0.9.2.2)
+    rdoc (3.12)
+      json (~> 1.4)
+    sinatra (1.3.2)
+      rack (~> 1.3, >= 1.3.6)
+      rack-protection (~> 1.2)
+      tilt (~> 1.3, >= 1.3.3)
+    sprockets (2.1.2)
+      hike (~> 1.2)
+      rack (~> 1.0)
+      tilt (~> 1.1, != 1.3.0)
+    thor (0.14.6)
+    tilt (1.3.3)
+    tzinfo (0.3.31)
+    url_mount (0.2.1)
+      rack
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bson_ext
+  coderay
+  haml
+  kaminari
+  mongo
+  mongo_mapper
+  padrino-helpers
+  rack-flash
+  sinatra
