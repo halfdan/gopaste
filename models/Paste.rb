@@ -3,6 +3,8 @@ class Paste
 
   before_create :generate_slug
 
+  paginates_per 20
+
   key :slug, String#, :required => true
   key :name, String, :default => 'No title given'
   key :author, String, :default => 'Anonymous'

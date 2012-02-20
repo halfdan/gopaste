@@ -1,10 +1,10 @@
 require 'sinatra'
 require 'haml'
-require 'rack-flash'
 
 require 'bson'
 require 'mongo'
 require 'mongo_mapper'
+require 'kaminari/sinatra'
 
 # CodeRay for Syntax HIghlighting
 require 'coderay'
@@ -14,6 +14,7 @@ require 'securerandom'
 
 require_relative 'config'
 require_relative 'lib/scanners/ninja'
+require_relative 'lib/helpers'
 
 configure do
   MongoMapper.connection= Mongo::Connection.new('localhost')
@@ -23,7 +24,8 @@ end
 enable :sessions
 
 helpers do
-  use Rack::Flash
+  include Kaminari::Helpers::SinatraHelpers::HelperMethods
+  include Helpers::DateHelpers
 
   def get_language_name name
     LANGUAGES.key(name.to_sym)
@@ -32,6 +34,7 @@ end
 
 # require Models
 require_relative 'models/Paste'
+require_relative 'models/language_cloud'
 
 layout 'layout'
 
@@ -41,13 +44,17 @@ get '/' do
 end
 
 post '/add' do
-  paste = Paste.new
-  paste.name = params[:name] unless params[:name].blank?
-  paste.author = params[:author] unless params[:author].blank?
-  paste.language = params[:language]
-  paste.code = params[:code]
-  paste.save
-  redirect '/paste/' + paste.slug
+  if params[:special].blank?
+    paste = Paste.new
+    paste.name = params[:name] unless params[:name].blank?
+    paste.author = params[:author] unless params[:author].blank?
+    paste.language = params[:language]
+    paste.code = params[:code]
+    paste.save
+    redirect '/paste/' + paste.slug
+  else
+    haml :spam
+  end
 end
 
 get '/search' do
@@ -65,10 +72,15 @@ end
 
 get '/recent' do
   # Load latest 10 pastes
-  @pastes = Paste.sort(:created_at.desc).limit(10).all
+  @pastes = Paste.sort(:created_at.desc).page(params[:page])
   haml :recent
 end
 
 get '/about' do
   haml :about
+end
+
+get '/browse' do
+  @languages = LanguageCloud.build.find()
+  haml :browse
 end
