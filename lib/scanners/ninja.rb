@@ -3,7 +3,7 @@ module Scanners
 
   class Ninja < Scanner
 
-    include Streamable
+#    include Streamable
     register_for :ninja
     file_extension 'nj'
     title 'Ninja'
