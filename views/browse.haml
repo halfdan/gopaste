@@ -1,0 +1,12 @@
+%h1 Browse Languages
+%hr
+%table.recent
+  %thead
+    %tr
+      %td Language
+      %td # of Pastes
+  %tbody
+  - @languages.each do |lang|
+    %tr
+      %td= lang['_id']['language'].capitalize
+      %td= lang['value']['count'].to_i
